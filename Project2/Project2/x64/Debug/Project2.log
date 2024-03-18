@@ -1,0 +1,47 @@
+﻿  Main.cpp
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(10,9): error C3646: 'productName': unknown override specifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(10,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(15,30): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(17,28): error C2065: 'productID': undeclared identifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(18,30): error C2065: 'productName': undeclared identifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(19,32): error C2065: 'productPrice': undeclared identifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(20,34): error C2065: 'productQuantity': undeclared identifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Main.cpp(29,9): error C2660: 'Inventory::setProductDetails': function does not take 4 arguments
+  C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(15,7):
+  see declaration of 'Inventory::setProductDetails'
+  C:\Users\kpn37\source\repos\Project2\Project2\Main.cpp(29,9):
+  while trying to match the argument list '(int, std::string, double, int)'
+  
+  Class Inventory.cpp
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(10,9): error C3646: 'productName': unknown override specifier
+  (compiling source file 'Class%20Inventory.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(10,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Class%20Inventory.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\ProjectHeader.h(15,30): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Class%20Inventory.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(17,2): error C2065: 'cout': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(17,28): error C2065: 'productID': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(18,2): error C2065: 'cout': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(18,30): error C2065: 'productName': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(19,2): error C2065: 'cout': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(19,32): error C2065: 'productPrice': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(20,2): error C2065: 'cout': undeclared identifier
+C:\Users\kpn37\source\repos\Project2\Project2\Class Inventory.cpp(20,34): error C2065: 'productQuantity': undeclared identifier
+  Generating Code...

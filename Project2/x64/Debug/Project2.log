@@ -1,0 +1,33 @@
+﻿  Inventory.cpp
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\ProjectHeader.h(15,20): error C2065: 'Inventory': undeclared identifier
+  (compiling source file 'Inventory.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\ProjectHeader.h(15,30): error C2146: syntax error: missing ')' before identifier 'arr'
+  (compiling source file 'Inventory.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(54,13): error C2679: binary '=': no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(69,1):
+  could be 'Inventory &Inventory::operator =(Inventory &&)'
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(69,1):
+  or       'Inventory &Inventory::operator =(const Inventory &)'
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(54,13):
+  while trying to match the argument list '(Inventory, int)'
+  
+  Main.cpp
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\ProjectHeader.h(15,20): error C2065: 'Inventory': undeclared identifier
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\ProjectHeader.h(15,30): error C2146: syntax error: missing ')' before identifier 'arr'
+  (compiling source file 'Main.cpp')
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(54,13): error C2679: binary '=': no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+  (compiling source file 'Main.cpp')
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(69,1):
+  could be 'Inventory &Inventory::operator =(Inventory &&)'
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(69,1):
+  or       'Inventory &Inventory::operator =(const Inventory &)'
+  C:\Users\kpn37\source\repos\Project2\Project2\Project2\Inventory.cpp(54,13):
+  while trying to match the argument list '(Inventory, int)'
+  
+C:\Users\kpn37\source\repos\Project2\Project2\Project2\Main.cpp(67,6): error C2064: term does not evaluate to a function taking 3 arguments
+  Generating Code...

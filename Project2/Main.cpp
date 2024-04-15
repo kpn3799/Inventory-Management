@@ -1,5 +1,5 @@
 #include <iostream>
-#include<iomanip>
+#include <iomanip>
 #include "ProjectHeader.h"
 #include "Inventory.cpp"
 #include <vector>
@@ -7,70 +7,71 @@ using namespace std;
 
 int main()
 {
+    Inventory inventory;
+    int choice;
+        cout << "Welcome to Inventory Manager! Please choose an option:";
+        std::cout << "\n" << std::setfill('~') << std::setw(100);
+        cout << "\n1. Register a product ID\n";
+        cout << "2. Add product\n";
+        cout << "3. Display inventory\n";
+        cout << "4. Display details of a specific product\n";
+        cout << "5. Delete a product\n";
+        cout << "6. Exit";
+        std::cout << "\n" << std::setfill('~') << std::setw(100);
+    do {
+        cout << "\nEnter your choice from the top menu:\n";
+        cin >> choice;
 
-	//dynamically allocate an array: https://www.youtube.com/watch?v=igSuiwB7pBU&ab_channel=CodeBeauty
+        switch (choice) {
+        case 1: {
+            int id;
+            cout << "\nEnter Product ID Number:\n";
+            cin >> id;
+            // You can register product ID here if needed
+            break;
+        }
+        case 2: {
+            string name;
+            int id, quantity;
+            double price;
+            cout << "\nEnter Product Name: ";
+            cin.ignore();
+            getline(cin, name);
+            cout << "\nEnter Product ID Number: ";
+            cin >> id;
+            cout << "\nEnter Product Price: ";
+            cin >> price;
+            cout << "\nEnter Product Quantity: ";
+            cin >> quantity;
+            inventory.addProduct(name, id, price, quantity);
+            break;
+        }
+        case 3:
+            inventory.displayInventory();
+            break;
+        case 4: {
+            int id;
+            cout << "\nEnter the product ID to display details: ";
+            cin >> id;
+            inventory.displayProductDetails(id);
+            break;
+        }
+        case 5: {
+            int id;
+            cout << "\nEnter the product ID to delete: ";
+            cin >> id;
+            inventory.deleteProduct(id);
+            break;
+        }
+        case 6:
+            cout << "\nThank you!";
+            break;
+        default:
+            cout << "\nError.. enter a number between 1 and 6. ";
+            break;
+        }
 
-	// the following variables are product details
-	int id=0;
-	int quantity = 0;
-	std::string name="";
-	double price=0;
-	const int size = 50;
-	Inventory productList[size];
+    } while (choice != 6);
 
-	std::cout << "Would you like to register a product ID?";
-		char registerProduct;
-		cin >> registerProduct;
-
-		if (registerProduct == 'Y' || 'y')
-		{
-
-			for (int i = 0; i < size; i++)
-			{
-				productList[i].setProductDetails(id, name, price, quantity);
-				productList[i].getProductDetails();
-				cout << "enter another product?";
-				cin >> registerProduct;
-				if (registerProduct != 'Y' || 'y')
-				{
-					cout << "okay!";
-					break;
-					
-				}
-			}
-
-		}
-
-
-	/* if user chooses to enter a new product ID, we will store it in 
-		our 'product' object */ 
-
-
-	std::cout << "Would you like to display entire inventory?";
-	char displayInventory;
-	cin >> displayInventory;
-	if (displayInventory == 'Y' || 'y') {
-		cout << "\nProduct Details:\n";
-		for (int i = 0; i < size; i++) 
-		{
-			productList[i].displayProductDetails();
-		}
-	}
-
-	std::cout << "Would you like to delete a specific product?";
-	std::cout << "Enter the product ID of the product you'd like to delete: ";
-	int n = sizeof(productList) / sizeof(productList[0]);
-	int x;
-	cin >> x;
-
-	// Delete x from arr[]
-	n = deleteElement(productList, n, x);
-
-	cout << "Modified array is \n";
-		for (int i = 0; i < size; i++)
-		{
-			productList[i].displayProductDetails();
-		}
-
-	return 0;
+    return 0;
 }

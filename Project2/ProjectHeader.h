@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <vector>
 using namespace std;
 #pragma once
 
@@ -12,7 +13,8 @@ using namespace std;
 	void setProductDetails(int id, string name, double price, int quantity);
 	void getProductDetails();
 	void displayProductDetails();
-	int deleteElement(int arr[], int n, int x);
+	int getProductID();
+	void deleteProduct(int id);
 
 
 #endif //must end with this

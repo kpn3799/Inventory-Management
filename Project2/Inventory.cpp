@@ -1,69 +1,74 @@
-#include "ProjectHeader.h"
-#include <iomanip>
-#include <string>
+#include <iostream>
+#include <vector>
+#include <limits>
+#include<iomanip>
+
 using namespace std;
 
-// Our Inventory class, where the bulk of our functions and scripting will be in. This includes setters and getters.
-
-//class inventory that sets, defines and/or calculate our structures
-class Inventory 
+class Inventory
 {
 private:
-		string productName = "";
-		int productID=0;
-		double productPrice=0;
-		int productQuantity=0;
+    struct Product {
+        string productName;
+        int productID;
+        double productPrice;
+        int productQuantity;
+    };
+
+    vector<Product> productList;
+
 public:
-	// below will add a e
+    void addProduct(const string& name, int id, double price, int quantity)
+    {
+        Product newProduct;
+        newProduct.productName = name;
+        newProduct.productID = id;
+        newProduct.productPrice = price;
+        newProduct.productQuantity = quantity;
+        productList.push_back(newProduct);
+        cout << "Product added successfully." << endl;
+    }
 
-	void getProductDetails()
-	{
+    void displayInventory() const
+    {
+        cout << "\nInventory Details:\n";
+        if (productList.empty()) {
+            cout << setw(50) << "Inventory is empty." << endl;
+        }
+        else {
+            cout << setw(15) << "Product Name" << setw(15) << "Product ID" << setw(15) << "Price" << setw(15) << "Quantity" << endl;
+            for (const auto& product : productList) {
+                cout << setw(15) << product.productName << setw(15) << product.productID << setw(15) << "$" << product.productPrice << setw(15) << product.productQuantity << endl;
+            }
+        }
+    }
 
-		cout << "Enter Product Name: ";
-		cin.ignore();
-		std::getline(std::cin, productName);
-		cout << "Enter Product ID Number: ";
-		cin >> productID;
-		cout << "Enter Product Price: ";
-		cin >> productPrice;
-		cout << "Enter Product Quantity: ";
-		cin >> productQuantity;
-	}
+    void displayProductDetails(int id) const
+    {
+        for (const auto& product : productList) {
+            if (product.productID == id) {
+                cout << "\nProduct Details:\n";
+                cout << "Product Name: " << product.productName << endl;
+                cout << "Product ID: " << product.productID << endl;
+                cout << "Product Price: $" << product.productPrice << endl;
+                cout << "Product Quantity: " << product.productQuantity << endl;
+                return;
+            }
+        }
+        cout << "Product with ID " << id << " not found." << endl;
+    }
 
-	void setProductDetails(int id, string name, double price, int quantity)
-	{
-		string productName = name;
-		int productID = id;
-		double productPrice = price;
-		int productQuantity = quantity;
-
-	}
-	void displayProductDetails() const
-	{
-		cout << "Product Name: " << productName << endl;
-		cout << "Product ID: " << productID << endl;
-		cout << "Product Price: $" << productPrice << endl;
-		cout << "Product Quantity: " << productQuantity << endl;
-
-	}
-	int deleteElement(int arr[], int n, int x)
-	{
-		// Search x in array
-		int i;
-		for (i = 0; i < n; i++)
-			if (arr[i] = x)
-				break;
-
-		// If x found in array
-		if (i < n)
-		{
-			// reduce size of array and move all
-			// elements on space ahead
-			n = n - 1;
-			for (int j = i; j < n; j++)
-				arr[j] = arr[j + 1];
-		}
-
-		return n;
-	}
+    void deleteProduct(int id)
+    {
+        for (auto it = productList.begin(); it != productList.end(); ++it)
+        {
+            if (it->productID == id)
+            {
+                productList.erase(it);
+                cout << "Product with ID " << id << " has been deleted." << endl;
+                return;
+            }
+        }
+        cout << "Product with ID " << id << " not found." << endl;
+    }
 };

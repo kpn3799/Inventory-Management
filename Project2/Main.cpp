@@ -63,7 +63,7 @@ int main()
             inventory.deleteProduct(id);
             break;
         }
-        case 6:
+        case 6: // 6 is the exit. the switch method will continue if the user doesn't enter 6, it will ask to enter a choice.
             cout << "\nThank you!";
             break;
         default:

@@ -56,20 +56,20 @@ public:
                 return;
             }
         }
-        cout << "Product with ID " << id << " not found." << endl;
+        cout << "Product with ID " << id << " not found." << endl; // if the number 'id' the user input is not there, then this error message will show.
     }
 
-    void deleteProduct(int id) 
+    void deleteProduct(int id) // this function will delete a product if the user enters its 'id'
     {
-        for (auto it = productList.begin(); it != productList.end(); ++it) 
+        for (auto it = productList.begin(); it != productList.end(); ++it) // a 'for' loop that will start from the beginning of the productList vector. The counter for iteration is 'it', AKA we will start from the beginning of the loop. IF the productList vector does not end at the last element, then move on to the next element in the vector.
         {
-            if (it->productID == id)
+            if (it->productID == id) // a nested loop that IF it points to the productID within our productList, then it equals id.
             {
-                productList.erase(it);
+                productList.erase(it); // we can then erase 'it' (the productID and its contents) since it equals its id.
                 cout << "Product with ID " << id << " has been deleted." << endl;
                 return;
             }
         }
-        cout << "Product with ID " << id << " not found." << endl;
+        cout << "Product with ID " << id << " not found." << endl; // if our finder cannot find ID from user input, then display error message.
     }
 };

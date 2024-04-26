@@ -8,7 +8,7 @@
 using namespace std;
 #pragma once
 
-// the functions that we will use in our inventory and main classes
+// class delarations are stored here
 
 	void setProductDetails(int id, string name, double price, int quantity);
 	void getProductDetails();

@@ -8,7 +8,7 @@
 using namespace std;
 #pragma once
 
-// class delarations are stored here
+// class delarations with their member functions are stored here
 
 	void setProductDetails(int id, string name, double price, int quantity);
 	void getProductDetails();
